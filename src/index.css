@@ -40,6 +40,17 @@ section {
     transform: translate(-50% ,-50%);
 
 }
+    .noisy {
+        @apply absolute inset-0 size-full bg-[url("/images/noise.png")];
+    }
+.card-3d {
+  border-radius: 1.5rem; /* match rounded-l-3xl */
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    0 40px 80px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s ease;
+}
+
 
 .card-container {
     position: relative;
@@ -128,4 +139,117 @@ section {
     }
 
 
+}
+
+/* .container {
+    width:100%;
+    height:100%;
+}
+img{
+    width:100%;
+    height:100%;
+    object-fit : cover;
+}
+section{
+    position: relative;
+    width: 100vh;
+    height:100vh;
+    background-color: black;
+}
+h1{
+    position: absolute;
+    top:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    text-align:center;
+    font-size:5vw;
+    font-weight: lighter;
+    font-height:100%;
+}
+.card{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:240px;
+    height:360px;
+    perspective: 1000px;
+}
+.card p{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    font-size:20px;
+    font-weight: 500;
+        
+}
+.card-wrapper{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:100%;
+    height:100%;
+    animation: floating 3s infinite ease-in-out;
+}
+#card-1 .card-wrapper{
+    animation-delay:0;
+}
+
+
+#card-2 .card-wrapper{
+    animation-delay:0.2;
+}
+#card-3 .card-wrapper{
+    animation-delay:0.4;
+}
+#card-4 .card-wrapper{
+    animation-delay:0.6;
+}
+
+.flip-card-inner{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    transform-style :preserve-3d;
+     
+}
+.flip-card-front , .flip-card-back{
+     position: absolute;
+     width:100%;
+     height: 100%;
+     backface-visibility: hidden;
+     border-radius: 0.8em;
+     overflow: hidden;
+}
+.flip-card-back{
+    padding:1em;
+    background-color: #fff;
+    transform: rotateY(180deg);
+}
+
+@keyframes floating{
+    0%{
+        transform: translate(-50%,-50%);
+    }
+    
+    50%{
+        transform: translate(-50%,-60%);
+    }
+    100%{
+        transform: translate(-50%,-50%);
+    }
+} */
+@keyframes floating {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -10px;
+  }
+  100% {
+    translate: 0 0;
+  }
 }

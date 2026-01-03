@@ -1,7 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {
+  FaInstagram,
+  FaXTwitter,
+  FaLinkedin,
 
+} from "react-icons/fa6"
 gsap.registerPlugin(ScrollTrigger);
 
 const Cards = () => {
@@ -172,7 +177,7 @@ className="relative w-[75%] h-[60vh] flex gap-0 items-center justify-center"
           {/* Card 1 */}
           <div 
             ref={card1Ref}
-className="relative flex-1 h-full"
+className="relative flex-1 h-full "
             style={{ transformStyle: 'preserve-3d' }}
           >
             <div 
@@ -188,14 +193,20 @@ className="relative flex-1 h-full"
             </div>
             <div 
               ref={card1BackRef}
-              className="absolute w-full h-full bg-red-600 rounded-l-3xl flex flex-col items-center justify-center p-8"
+              className="noisy card-3d absolute w-full h-full bg-red-600 rounded-l-3xl flex flex-col items-center justify-center p-8"
               style={{ 
                 backfaceVisibility: 'hidden',
                 transform: 'rotateY(180deg)'
               }}
             >
               <span className="absolute top-8 left-8 text-6xl font-bold opacity-40">01</span>
+              
               <p className="text-2xl font-semibold">Interactive Web Experience</p>
+            <div className="absolute bottom-6 left-6 flex gap-7">
+    <FaInstagram size={22} />
+    <FaXTwitter size={22} />
+    <FaLinkedin size={22} />
+  </div>
             </div>
           </div>
 
@@ -218,7 +229,7 @@ className="relative flex-1 h-full"
             </div>
             <div 
               ref={card2BackRef}
-              className="absolute w-full h-full bg-green-600 flex flex-col items-center justify-center p-8"
+              className="absolute card-3d w-full h-full bg-green-600 flex flex-col items-center justify-center p-8"
               style={{ 
                 backfaceVisibility: 'hidden',
                 transform: 'rotateY(180deg)'
@@ -226,6 +237,11 @@ className="relative flex-1 h-full"
             >
               <span className="absolute top-8 left-8 text-6xl font-bold opacity-40">02</span>
               <p className="text-2xl font-semibold">Creative Digital Solutions</p>
+<div className="absolute bottom-6 left-6 flex gap-7">
+    <FaInstagram size={22} />
+    <FaXTwitter size={22} />
+    <FaLinkedin size={22} />
+  </div>
             </div>
           </div>
 
@@ -248,7 +264,7 @@ className="relative flex-1 h-full"
             </div>
             <div 
               ref={card3BackRef}
-              className="absolute w-full h-full bg-blue-600 rounded-r-3xl flex flex-col items-center justify-center p-8"
+              className="absolute card-3d w-full h-full bg-blue-600 rounded-r-3xl flex flex-col items-center justify-center p-8"
               style={{ 
                 backfaceVisibility: 'hidden',
                 transform: 'rotateY(180deg)'
@@ -256,6 +272,11 @@ className="relative flex-1 h-full"
             >
               <span className="absolute top-8 left-8 text-6xl font-bold opacity-40">03</span>
               <p className="text-2xl font-semibold">Modern Design Portfolio</p>
+            <div className="absolute bottom-6 left-6 flex gap-7">
+    <FaInstagram size={22} />
+    <FaXTwitter size={22} />
+    <FaLinkedin size={22} />
+  </div>
             </div>
           </div>
         </div>
